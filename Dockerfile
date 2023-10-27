@@ -4,12 +4,12 @@
 FROM jlesage/baseimage-gui:alpine-3.18-v4
 
 # Define software versions.
-ARG JAVAJRE_VERSION=8.342.07.4
+ARG JAVAJRE_VERSION=8.392.08.1
 ARG TMM_VERSION=3.1.18
 
 # Define software download URLs.
 ARG TMM_URL=https://archive.tinymediamanager.org/v${TMM_VERSION}/tmm_${TMM_VERSION}_linux.tar.gz
-ARG JAVAJRE_URL=https://corretto.aws/downloads/resources/${JAVAJRE_VERSION}/amazon-corretto-${JAVAJRE_VERSION}-linux-x64.tar.gz
+ARG JAVAJRE_URL=https://corretto.aws/downloads/resources/{JAVAJRE_VERSION}/amazon-corretto-{JAVAJRE_VERSION}-alpine-linux-x64.tar.gz
 ENV JAVA_HOME=/opt/jre/bin
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/jre/bin
 # Define working directory.
