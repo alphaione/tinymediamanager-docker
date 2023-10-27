@@ -21,4 +21,4 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/tinymediamanager:latest
-                ${{ secrets.DOCKERHUB_USERNAME }}/tinymediamanager:${{ VERSION }}
+                ${{ secrets.DOCKERHUB_USERNAME }}/tinymediamanager:v3.1.18
