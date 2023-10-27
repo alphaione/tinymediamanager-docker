@@ -9,7 +9,7 @@ ARG TMM_VERSION=3.1.18
 
 # Define software download URLs.
 ARG TMM_URL=https://archive.tinymediamanager.org/v${TMM_VERSION}/tmm_${TMM_VERSION}_linux.tar.gz
-ARG JAVAJRE_URL=https://corretto.aws/downloads/resources/{JAVAJRE_VERSION}/amazon-corretto-{JAVAJRE_VERSION}-alpine-linux-x64.tar.gz
+ARG JAVAJRE_URL=https://corretto.aws/downloads/resources/${JAVAJRE_VERSION}/amazon-corretto-${JAVAJRE_VERSION}-alpine-linux-x64.tar.gz
 ENV JAVA_HOME=/opt/jre/bin
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/jre/bin
 # Define working directory.
@@ -25,7 +25,7 @@ RUN \
 RUN \
     add-pkg --virtual build-dependencies curl && \
     mkdir /opt/jre && \
-    curl -# -L ${JAVAJRE_URL} | tar -xz --strip 2 -C /opt/jre amazon-corretto-${JAVAJRE_VERSION}-linux-x64/jre && \
+    curl -# -L ${JAVAJRE_URL} | tar -xz --strip 2 -C /opt/jre amazon-corretto-${JAVAJRE_VERSION}-alpine-linux-x64/jre && \
     del-pkg build-dependencies
 
 # Install dependencies.
