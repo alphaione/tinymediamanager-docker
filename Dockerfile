@@ -28,6 +28,7 @@ RUN \
     curl -L ${JAVAJRE_URL} && \
     tar -xz amazon-corretto-${JAVAJRE_VERSION}-alpine-linux-x64.tar.gz && cd amazon-corretto-${JAVAJRE_VERSION}-alpine-linux-x64.tar && \
     tar -xz --strip 2 -C /opt/jre amazon-corretto-${JAVAJRE_VERSION}-alpine-linux-x64/jre && \
+    cd /tmp && \
     rm -rf amazon-corretto-${JAVAJRE_VERSION}-alpine-linux-x64.tar && \
     del-pkg build-dependencies
 
